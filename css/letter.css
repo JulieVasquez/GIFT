@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* SOBRE */
+#envelope-container {
+  text-align: center;
+  cursor: pointer;
+  animation: fadeIn 1s ease;
+}
+
+#envelope {
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+#envelope:hover {
+  transform: scale(1.05);
+}
+
+.hint {
+  margin-top: 12px;
+  color: #4a6fa5;
+  font-family: "Fuzzy Bubbles";
+}
+
+/* CARTA */
+#letter-container {
+  position: fixed;
+  inset: 0;
+  display: none; /* MUY IMPORTANTE */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+.letter {
+  width: 520px;
+  max-width: 90%;
+  min-height: 700px;
+
+  background-image: url("../images/carta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 60px 50px;
+  border-radius: 14px;
+
+}
+
+/* TEXTO */
+.letter h1 {
+  text-align: center;
+  color: #1f3c5b;
+  margin-bottom: 30px;
+}
+
+.letter p {
+  color: #3f3f3f;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); }
+  to { transform: translateY(0); }
+}

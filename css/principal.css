@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  max-width: 750px;
+  text-align: center;
+}
+
+
+h1 {
+  color: #1f3c5b; /* azul marino suave */
+  margin-bottom: 35px; /* separa el título del texto */
+  font-family: "Alex Brush";
+  font-size: 4.8em;
+}
+
+
+p {
+  font-family: "Fuzzy Bubbles";
+  margin-bottom: 30px; /* separa el título del texto */
+  font-size: 1.35em;
+  color: #4a6fa5;
+}
+
+
+.subtitle {
+  color: #4a6fa5;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: #6b88b3;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  padding: 16px 30px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  font-family: "Fuzzy Bubbles";
+}
+
+
+button.primary {
+  background: #1f3c5b;
+  color: white;
+}
+
+button.primary:hover {
+  background: #2a4f7a;
+}
+
+button.secondary {
+  background: transparent;
+  color: #1f3c5b;
+  border: 1px solid #1f3c5b;
+}
+
+button.secondary:hover {
+  background: #eef4fb;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup {
+  background: #fcf9dc;
+  padding: 30px 35px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 320px;
+  animation: pop 0.3s ease;
+}
+
+.popup h2 {
+  font-family: "Fuzzy Bubbles", semi-bold;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-family: "Fuzzy Bubbles";
+  margin-bottom: 20px;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

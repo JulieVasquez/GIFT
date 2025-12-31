@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  grid-template-rows: repeat(2, 220px);
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  background: transparent; /* mismo fondo suave */
+}
+
+.gift-card {
+  background: transparent;
+  border-radius: 20px;
+  border: 5px solid #1f3c5b; /* azul marino suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gift-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* no se deforma */
+  border-radius: 18px;   /* respeta la curva */
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(31, 60, 91, 0.25);
+}
