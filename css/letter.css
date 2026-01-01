@@ -1,80 +1,47 @@
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  background-image: url("../images/background.png"); /* Ruta de la imagen de fondo */
+  background-size: cover;       /* La imagen cubre toda la pantalla */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* No se repite */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', sans-serif;
+}
+.boton-retorno {
+  position: fixed;   /* fijo en la pantalla */
+  top: 20px;         /* distancia desde arriba */
+  left: 20px;        /* distancia desde la izquierda */
+  z-index: 1000;     /* encima de todo */
 }
 
-/* SOBRE */
-#envelope-container {
-  text-align: center;
-  cursor: pointer;
-  animation: fadeIn 1s ease;
+.boton-retorno img {
+  width: 60px;       /* tamaño del ícono */
+  height: 60px;
+  cursor: pointer;   /* se ve clicable */
+  transition: transform 0.2s; /* animación suave */
 }
 
-#envelope {
-  width: 220px;
-  transition: transform 0.3s ease;
+.boton-retorno img:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
 }
 
-#envelope:hover {
-  transform: scale(1.05);
+.carta {
+  column-count: 3;       /* 3 columnas en desktop */
+  column-gap: 40px;      /* espacio entre columnas */
+  line-height: 1.6;      /* más cómodo para leer */
+  max-width: 1200px;     /* opcional: limita el ancho total */
+  margin: 50px auto;     /* centra el div y deja margen arriba */
+  color: #333;
 }
 
-.hint {
-  margin-top: 12px;
-  color: #4a6fa5;
+h3 {
   font-family: "Fuzzy Bubbles";
 }
-
-/* CARTA */
-#letter-container {
-  position: fixed;
-  inset: 0;
-  display: none; /* MUY IMPORTANTE */
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1s ease;
+p {
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
-.letter {
-  width: 520px;
-  max-width: 90%;
-  min-height: 700px;
 
-  background-image: url("../images/carta.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  padding: 60px 50px;
-  border-radius: 14px;
-
-}
-
-/* TEXTO */
-.letter h1 {
-  text-align: center;
-  color: #1f3c5b;
-  margin-bottom: 30px;
-}
-
-.letter p {
-  color: #3f3f3f;
-  line-height: 1.7;
-  font-size: 1.05em;
-}
-
-/* ANIMACIONES */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); }
-  to { transform: translateY(0); }
-}

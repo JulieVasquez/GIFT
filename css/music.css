@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  min-height: 100vh; /* Cambiado a min-height para que no corte el contenido */
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  flex-direction: column; /* Alinea Título y luego Contenedor */
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto; /* Permite scroll si hay muchas canciones */
+  padding-top: 40px; /* Espacio para que el título no pegue al borde superior */
+}
+
+.boton-retorno {
+  position: fixed;   /* fijo en la pantalla */
+  top: 20px;         /* distancia desde arriba */
+  left: 20px;        /* distancia desde la izquierda */
+  z-index: 1000;     /* encima de todo */
+}
+
+.boton-retorno img {
+  width: 60px;       /* tamaño del ícono */
+  height: 60px;
+  cursor: pointer;   /* se ve clicable */
+  transition: transform 0.2s; /* animación suave */
+}
+
+.boton-retorno img:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
+
+.musicas-container {
+
+  display: flex;
+
+  flex-wrap: wrap;   /* para que bajen si no caben en la fila */
+
+  gap: 20px;         /* espacio entre cards */
+
+  justify-content: center;
+
+  margin: 20px;
+
+}
+
+.card {
+  background-color: #fdf6f0;
+  border-radius: 12px;
+  border-color: #1f3c5b;
+  padding: 15px;
+  width: 320px;       /* ancho del rectángulo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-family: "Alex Brush";
+}
+
+.card .descripcion {
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #555;
+}
+
+.titulo-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre el título y las cartas */
+}
+    
+
+.titulo-musicas {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em; /* Un poco más grande para que destaque */
+  color: #1f3c5b;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.musicas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  max-width: 1200px; /* Limita el ancho para que no se estiren demasiado en pantallas grandes */
+  margin: 0 auto 40px auto; /* Centrado horizontal y margen abajo */
+}
+
+/* El resto de tu código de .card y .boton-retorno se queda igual */
+
+
+
