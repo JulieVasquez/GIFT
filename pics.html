@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti, mi amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Coming+Soon&family=Fuzzy+Bubbles:wght@400;700&family=Indie+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/pics.css">
+</head>
+
+<body>
+  <a href="secondlayer.html" class="boton-retorno">
+    <img src="images/back.png" alt="Volver">
+  </a>
+  <!-- Ícono de ayuda -->
+<div class="help-icon" onclick="togglePopup()">?</div>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <span class="close" onclick="togglePopup()">×</span>
+    <p>
+      Espero pronto poder actualizar esta sección con fotos nuestras, pero mientras tanto, quise colocar algunas fotos que hicieron y hacen que mi corazón se acelere. Cada momento o emoción me recuerda lo afortunada que soy de tenerte en mi vida.
+    </p>
+  </div>
+</div>
+<section class="pics-section">
+  <h2 class="titulo-pics">Detalles de ti que me enamoran</h2>
+
+    <div class="story-card" onclick="nextSlide()">
+
+    <img id="storyImage" src="images/pic1.png" alt="Foto">
+
+    <div class="story-text">
+        <h3 id="storyTitle">Tu sonrisa</h3>
+        <p id="storyDesc">
+        Esa que aparece sin avisar y me hace sentir que todo está bien.
+        </p>
+    </div>
+
+    </div>
+</section>
+  <script src="js/pics.js"></script>
+
+</body>
+</html>
+

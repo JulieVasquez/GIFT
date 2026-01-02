@@ -7,9 +7,8 @@ body {
   align-items: center;
   font-family: 'Segoe UI', sans-serif;
   overflow-y: auto; /* Permite scroll si hay muchas canciones */
-  padding-top: 40px; /* Espacio para que el título no pegue al borde superior */
+  padding-top: 20px; /* Espacio para que el título no pegue al borde superior */
 }
-
 .boton-retorno {
   position: fixed;   /* fijo en la pantalla */
   top: 20px;         /* distancia desde arriba */
@@ -27,78 +26,95 @@ body {
 .boton-retorno img:hover {
   transform: scale(1.1); /* efecto al pasar el mouse */
 }
-
-.musicas-container {
-
-  display: flex;
-
-  flex-wrap: wrap;   /* para que bajen si no caben en la fila */
-
-  gap: 20px;         /* espacio entre cards */
-
-  justify-content: center;
-
-  margin: 20px;
-
-}
-
-.card {
-  background-color: #fdf6f0;
-  border: 2px solid #1f3c5b;   /* 👈 borde azul visible */
-  border-radius: 12px;
-  padding: 15px;
-  width: 320px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-align: center;
-
-  transition: all 0.3s ease;  /* 👈 necesario para hover suave */
-}
-.card:hover {
-  transform: translateY(-6px) scale(1.02); /* se eleva suavemente */
-  box-shadow: 0 10px 20px rgba(31, 60, 91, 0.35);
-  border-color: #4fa3d1; /* azul más clarito al pasar el mouse */
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-family: "Alex Brush";
-}
-
-.card .descripcion {
-  margin-top: 10px;
-  font-size: 0.9em;
-  font-family: 'Fuzzy Bubbles', cursive;
-  color: #555;
-}
-.card:hover .descripcion {
-  color: #1f3c5b;
-}
-.titulo-container {
+.pics-section {
   width: 100%;
-  text-align: center;
-  margin-bottom: 20px; /* Espacio entre el título y las cartas */
-}
-    
-
-.titulo-musicas {
-  font-family: 'Fuzzy Bubbles', cursive;
-  font-size: 2em; /* Un poco más grande para que destaque */
-  color: #1f3c5b;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.musicas-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-  max-width: 1200px; /* Limita el ancho para que no se estiren demasiado en pantallas grandes */
-  margin: 0 auto 40px auto; /* Centrado horizontal y margen abajo */
+  flex-direction: column;
+  align-items: center; /* centra la card */
+  margin-top: 30px;    /* separa del borde superior */
 }
 
-/* El resto de tu código de .card y .boton-retorno se queda igual */
+.titulo-pics {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 2.4em;
+  color: #1f3c5b;
+  text-align: center;
+  margin-bottom: 60px; /* espacio entre título y card */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
 
+
+.story-card {
+  position: relative;
+  width: 780px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card img {
+  width: 35%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.story-text {
+  width: 55%;
+}
+
+
+.story-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.story-text h3 {
+  font-family: 'Fuzzy Bubbles';
+  font-size: 1.9em;
+  color: #1f3c5b;
+}
+
+.story-text p {
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #444;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Flechas */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(31,60,91,0.8);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav:hover {
+  background: #1f3c5b;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* Ícono de pregunta */
 .help-icon {
@@ -174,4 +190,3 @@ body {
     transform: scale(1);
   }
 }
-

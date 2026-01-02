@@ -13,9 +13,21 @@
   <a href="secondlayer.html" class="boton-retorno">
     <img src="images/back.png" alt="Volver">
   </a>
+<!-- Ícono de ayuda -->
+<div class="help-icon" onclick="togglePopup()">?</div>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <span class="close" onclick="togglePopup()">×</span>
+    <p>
+      Sé que hemos hablado antes de estas canciones, también sé que algunas ya te las dediqué. Aún asi, quería que estuvieran aqui, porque cada una de ellas me recuerda a nosotras, a nuestra historia, a nuestro amor. Espero que las disfrutes tanto como yo al elegirlas para ti.  
+    </p>
+  </div>
+</div>
 
 <div class="titulo-container">
-    <h1 class="titulo-musicas">Canciones que me recuerdan mucho a nosotras</h1>
+    <h1 class="titulo-musicas">Te amo, Romina</h1>
   </div>
 <div class="musicas-container">
   <!-- Canción 1 -->
@@ -64,7 +76,7 @@
             width="300" height="80" frameborder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
     </iframe>
-    <p class="descripcion">Solo tus ojos veo un "para siempre".</p>
+    <p class="descripcion">Solo en tus ojos veo un "para siempre".</p>
   </div>
 
   <!-- Canción 5 -->
@@ -114,6 +126,6 @@
   <!-- repites cards según canciones -->
 </div>
 
-
+  <script src="js/music.js"></script>
 </body>
 </html>

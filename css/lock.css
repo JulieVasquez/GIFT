@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.boton-retorno {
+  position: fixed;   /* fijo en la pantalla */
+  top: 20px;         /* distancia desde arriba */
+  left: 20px;        /* distancia desde la izquierda */
+  z-index: 1000;     /* encima de todo */
+}
+
+.boton-retorno img {
+  width: 60px;       /* tamaño del ícono */
+  height: 60px;
+  cursor: pointer;   /* se ve clicable */
+  transition: transform 0.2s; /* animación suave */
+}
+
+.boton-retorno img:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
+.lock-section {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-lock {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 2.3em;
+  color: #1f3c5b;
+  margin-bottom: 40px;
+}
+
+.lock-card {
+  background: linear-gradient(135deg, #ffffff, #f6f9ff);
+  width: 420px;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  border: 2px solid #1f3c5b;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.lock-card:hover {
+  transform: scale(1.03);
+}
+
+.lock-icon {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+}
+
+.lock-text {
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.lock-card input {
+  width: 85%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #1f3c5b;
+  margin-bottom: 20px;
+  font-family: 'Fuzzy Bubbles', cursive;
+  text-align: center;
+}
+
+.lock-card button {
+  background: #1f3c5b;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Fuzzy Bubbles', cursive;
+  transition: background 0.3s;
+}
+
+.lock-card button:hover {
+  background: #274d73;
+}
+
+.error-msg {
+  color: #c0392b;
+  margin-top: 12px;
+  font-family: 'Fuzzy Bubbles', cursive;
+}

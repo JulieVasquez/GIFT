@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.final-container {
+  max-width: 650px;
+  text-align: center;
+  padding: 50px;
+  animation: fadeIn 2.5s ease;
+}
+
+.heart {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+h1 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3em;
+  color: #1f3c5b;
+  margin-bottom: 30px;
+}
+
+.mensaje {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.destacado {
+  font-size: 1.4em;
+  color: #1f3c5b;
+  margin-top: 30px;
+}
+
+.firma {
+  margin-top: 50px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.firma span {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5em;
+  color: #1f3c5b;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

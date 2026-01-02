@@ -1,11 +1,34 @@
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #fcf9dc, #f2f7fc);
+  min-height: 100vh;
+
+  background-image: url("../images/second.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-family: 'Segoe UI', sans-serif;
+}
+.boton-retorno {
+  position: fixed;   /* fijo en la pantalla */
+  top: 20px;         /* distancia desde arriba */
+  left: 20px;        /* distancia desde la izquierda */
+  z-index: 1000;     /* encima de todo */
+}
+
+.boton-retorno img {
+  width: 60px;       /* tamaño del ícono */
+  height: 60px;
+  cursor: pointer;   /* se ve clicable */
+  transition: transform 0.2s; /* animación suave */
+}
+
+.boton-retorno img:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
 }
 
 .grid-container {
